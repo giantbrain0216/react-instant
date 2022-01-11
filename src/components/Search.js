@@ -17,10 +17,12 @@ const searchClient = algoliasearch(
 
 function Search() {
   return (
-    <InstantSearch
-      searchClient={searchClient}
-      indexName="movies"
-    ></InstantSearch>
+    <InstantSearch searchClient={searchClient} indexName="movies">
+      <Header />
+      <div>
+        <Content />
+      </div>
+    </InstantSearch>
   );
 }
 
@@ -60,7 +62,7 @@ const Content = () => (
       <div className="">
         <SortBy
           defaultRefinement="movies"
-          items={[{ value: "movies", label: "Most Relevant" },]}
+          items={[{ value: "movies", label: "Most Relevant" }]}
         />
       </div>
     </div>
