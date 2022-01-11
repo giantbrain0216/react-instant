@@ -60,7 +60,7 @@ const Content = () => (
       <div className="">
         <SortBy
           defaultRefinement="movies"
-          items={[{ value: "movies", label: "Most Relevant" }]}
+          items={[{ value: "movies", label: "Most Relevant" },]}
         />
       </div>
     </div>
