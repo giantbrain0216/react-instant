@@ -1,6 +1,14 @@
 import React from "react";
 import algoliasearch from "algoliasearch";
-import { InstantSearch, SearchBox } from "react-instantsearch-dom";
+import {
+  InstantSearch,
+  SearchBox,
+  Hits,
+  Highlight,
+  Stats,
+  SortBy,
+  Pagination,
+} from "react-instantsearch-dom";
 
 const searchClient = algoliasearch(
   "latency",
@@ -41,6 +49,27 @@ const Hit = ({ hit }) => (
       </div>
     </div>
   </a>
+);
+
+const Content = () => (
+  <main>
+    <div className="information">
+      <div className="stats">
+        <Stats />
+      </div>
+      <div className="">
+        <SortBy
+          defaultRefinement="movies"
+          items={[{ value: "movies", label: "Most Relevant" }]}
+        />
+      </div>
+    </div>
+
+    <Hits hitComponent={Hit} />
+    <div>
+      <Pagination />
+    </div>
+  </main>
 );
 
 export default Search;
