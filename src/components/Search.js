@@ -1,6 +1,6 @@
 import React from "react";
 import algoliasearch from "algoliasearch";
-import { InstantSearch } from "react-instantsearch-dom";
+import { InstantSearch, SearchBox } from "react-instantsearch-dom";
 
 const searchClient = algoliasearch(
   "latency",
@@ -8,6 +8,22 @@ const searchClient = algoliasearch(
 );
 
 function Search() {
-  return <InstantSearch searchClient={searchClient} indexName="movies"></InstantSearch>;
+  return (
+    <InstantSearch
+      searchClient={searchClient}
+      indexName="movies"
+    ></InstantSearch>
+  );
 }
+
+const Header = () => (
+  <header className="header">
+    <SearchBox
+      className="search-bar"
+      translations={{ placeholder: "Search for Movies" }}
+    />
+  </header>
+);
+
+
 export default Search;
