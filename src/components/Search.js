@@ -8,6 +8,6 @@ const searchClient = algoliasearch(
 );
 
 function Search() {
-  return <InstantSearch></InstantSearch>;
+  return <InstantSearch searchClient={searchClient} indexName="movies"></InstantSearch>;
 }
 export default Search;
