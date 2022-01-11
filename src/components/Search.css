@@ -1,0 +1,7 @@
+.header {
+  padding-top: 4em;
+  width: 100%;
+  display: flex;
+  background-color: #dce2e9;
+  height: 20vh;
+}

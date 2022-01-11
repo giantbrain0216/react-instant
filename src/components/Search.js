@@ -9,6 +9,7 @@ import {
   SortBy,
   Pagination,
 } from "react-instantsearch-dom";
+import './Search.css';
 
 const searchClient = algoliasearch(
   "latency",
