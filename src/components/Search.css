@@ -38,3 +38,39 @@ ul {
 li {
   list-style-type: none;
 }
+
+.ais-Hits-item {
+  width: 32%;
+}
+
+.card {
+  background-color: #f9f9f9;
+  display: flex;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card-contents {
+  margin-left: 20px;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-title {
+  font-weight: bold;
+}
+.card-genre > span {
+  font-size: 15px;
+  width: 20px;
+  padding: 4px;
+  background-color: #c4c4c4;
+}
+
+.information {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 11px;
+}
